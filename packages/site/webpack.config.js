@@ -7,10 +7,10 @@ const TerserPlugin = require('terser-webpack-plugin');
 const { ASSET_DIR, OUTPUT_DIR, SITE_TITLE } = require('../../config');
 
 module.exports = [{
-  name: 'site-template-client',
+  name: 'hex-frontend-task-client',
   mode: 'production',
   entry: {
-    'site-template-client': './src/client/index.jsx',
+    'hex-frontend-task-client': './src/client/index.jsx',
   },
   output: {
     filename: '[name].[contenthash].js',
@@ -145,7 +145,7 @@ module.exports = [{
     }),
   ],
 }, {
-  name: 'site-template-server',
+  name: 'hex-frontend-task-server',
   mode: 'production',
   target: 'node',
   node: {
@@ -156,7 +156,7 @@ module.exports = [{
     server: './src/server/server.js',
   },
   output: {
-    filename: 'site-template-server.js',
+    filename: 'hex-frontend-task-server.js',
     path: path.join(__dirname, OUTPUT_DIR),
   },
 }];

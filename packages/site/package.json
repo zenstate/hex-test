@@ -1,12 +1,12 @@
 {
-  "name": "@zenstate/site-template-client",
+  "name": "@zenstate/hex-frontend-task-client",
   "version": "0.0.1",
   "main": "index.js",
   "author": "Liam McLaughlin",
   "license": "MIT",
   "private": false,
   "scripts": {
-    "start": "cd dist && node site-template-server.js",
+    "start": "cd dist && node hex-frontend-task-server.js",
     "lint": "./node_modules/.bin/eslint \"./*.{js,jsx}\"",
     "test": "./node_modules/.bin/jest",
     "test:watch": "./node_modules/.bin/jest --watch",

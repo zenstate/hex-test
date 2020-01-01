@@ -1,13 +1,49 @@
-# Introduction 
+# HEX Frontend Task
 
-A node.js / React based template to allow sites to be quickly built and templated without re-inventing the boilerplate..
+A submission against https://github.com/holidayextras/recruitment-tasks/blob/master/developer-flickr-task.md
 
-## Folder structure
+This SPA is designed to pull data from the flickr public stream
 
-- site/client - the source for client-side code and resources
-- site/server - the source for server-side code and resources
-- uiTests/scripts - the source for your ui tests (initially set up for jest and puppeteer)
+## Quick Start
 
-## Commands 
+This project is a monorepo containing two sub projects
+- site - The clientside and serverside code for the project.
+- uiTests - A puppeteer based set of ui tests.
 
-TBC...
+This project requires node.js v13 to run.
+
+This project uses [lerna](https://lerna.js.org/) to manage its the dependencies for the project.  To get a development version of the project, run the following 
+
+```bash
+git clone git@github.com:zenstate/hex-frontend-task.git
+cd hex-frontend-task
+lerna bootstrap
+lerna run dev
+```
+
+If you do not have lerna installed locally, run the following;
+
+```bash
+git clone git@github.com:zenstate/hex-frontend-task.git
+cd hex-frontend-task/packages/site
+yarn install
+yarn dev
+```
+
+## Running tests
+
+### Unit tests
+
+To run the unit tests for this project run 
+
+```bash
+lerna run test --stream
+```
+
+### UI tests
+
+To run the UI tests for this project run
+
+```bash
+lerna run test:ui --stream
+```

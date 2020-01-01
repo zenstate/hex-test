@@ -1,12 +1,13 @@
 {
-  "name": "@zenstate/site-template-uitests",
+  "name": "@zenstate/hex-frontend-task-uitests",
   "version": "0.0.1",
   "description": "A set of generic puppeteer tests",
   "main": "index.js",
   "author": "Liam McLaughlin",
   "license": "MIT",
   "scripts": {
-    "test": "./node_modules/.bin/jest ./scripts"
+    "test:ui": "./node_modules/.bin/jest ./scripts",
+    "lint": "./node_modules/.bin/eslint \"./*.{js,jsx}\""
   },
   "devDependencies": {
     "@babel/core": "^7.7.7",
