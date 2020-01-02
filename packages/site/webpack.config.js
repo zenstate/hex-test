@@ -99,9 +99,10 @@ module.exports = [{
           {
             loader: 'css-loader',
             options: {
-              modules: true,
+              modules: {
+                localIdentName: '[name]__[local]___[hash:base64:5]',
+              },
               importLoaders: 1,
-              localIdentName: '[name]__[local]___[hash:base64:5]',
             },
           },
           {
@@ -110,9 +111,11 @@ module.exports = [{
           {
             loader: 'sass-loader',
             options: {
-              includePaths: [
-                path.resolve(__dirname, 'src/client/scss'),
-              ],
+              sassOptions: {
+                includePaths: [
+                  path.resolve(__dirname, 'src/scss'),
+                ],
+              },
             },
           },
         ],
