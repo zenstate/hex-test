@@ -4,7 +4,7 @@ import webpack from 'webpack';
 import devMiddleware from 'webpack-dev-middleware';
 import hotMiddleware from 'webpack-hot-middleware';
 import webpackConfig from '../../webpack.config.dev';
-import { ASSET_DIR, BASE_URL, PORT, HOST } from '../../../../config';
+import { ASSET_DIR, BASE_URL, PORT, HOST } from '../../../../config.dev';
 
 const app = express();
 

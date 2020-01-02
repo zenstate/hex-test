@@ -94,7 +94,7 @@ module.exports = {
             {
                 test: /\.(sc|sa|c)ss$/,
                 use: ['style-loader', 'css-loader', 'sass-loader'],
-                exclude: path.resolve(__dirname, 'src/components'),
+                exclude: path.resolve(__dirname, 'src/client/components'),
             },
             {
                 test: /\.(sc|sa|c)ss$/,
@@ -103,9 +103,11 @@ module.exports = {
                     {
                         loader: 'css-loader',
                         options: {
-                            modules: true,
+                            modules: {
+                                localIdentName: '[name]__[local]___[hash:base64:5]',
+                            },
                             importLoaders: 1,
-                            localIdentName: '[name]__[local]___[hash:base64:5]',
+                            sourceMap: true,
                         },
                     },
                     {
@@ -114,13 +116,15 @@ module.exports = {
                     {
                         loader: 'sass-loader',
                         options: {
-                            includePaths: [
-                                path.resolve(__dirname, 'src/scss'),
-                            ],
+                            sassOptions: {
+                                includePaths: [
+                                    path.resolve(__dirname, 'src/scss'),
+                                ],
+                            },
                         },
                     },
                 ],
-                include: path.resolve(__dirname, 'src/components'),
+                include: path.resolve(__dirname, 'src/client/components'),
             },
         ],
     },
