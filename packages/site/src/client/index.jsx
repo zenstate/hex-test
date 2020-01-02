@@ -2,11 +2,11 @@ import "core-js/stable";
 import "regenerator-runtime/runtime";
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App';
-
+import Home from './components/Home';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './scss/index.scss';
 
 ReactDOM.render(
-    <App />,
+    <Home />,
     document.querySelector('#root'),
 );
