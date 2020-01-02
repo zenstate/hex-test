@@ -39,6 +39,7 @@ const getPosts = ({
             extras: reqExtras,
             page,
             per_page,
+            safe_search: 1,
         },
     }).then(resp => {
         if (resp.data.stat === 'ok') {

@@ -4,7 +4,9 @@ import s from './Home.scss';
 
 export default () => (
     <>
-        <h1 className={s.header}>Flickr Photo Stream</h1>
+        <header className={`nav justify-content-center ${s.header}`}>
+            <h1>Flickr Photo Stream</h1>
+        </header>
         <div className={s.photoListContainer}>
             <PhotoList />
         </div>
