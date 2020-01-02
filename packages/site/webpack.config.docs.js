@@ -140,7 +140,7 @@ module.exports = [{
     new HtmlWebpackPlugin({
       title: SITE_TITLE,
       template: 'src/template/index.hbs',
-      filename: '../index.html',
+      filename: '../index.htm',
     }),
     new MiniCssExtractPlugin({
       filename: '[name].[hash].css',
