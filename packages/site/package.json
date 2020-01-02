@@ -11,6 +11,7 @@
     "test": "./node_modules/.bin/jest",
     "test:watch": "./node_modules/.bin/jest --watch",
     "build": "./node_modules/.bin/webpack",
+    "build:docs": "./node_modules/.bin/webpack --config ./webpack.config.docs.js",
     "dev": "./node_modules/.bin/babel-node ./src/server/server.dev.js"
   },
   "devDependencies": {
