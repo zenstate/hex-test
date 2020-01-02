@@ -63,7 +63,7 @@ const PhotoList = ({ getPosts }) => {
   }
 
   return (
-    <div data-testid="PhotoList">
+    <div data-testid="PhotoList" className={s.container}>
       {photos}
       {isLoading ? (
         <div className={s.loadingContainer}>
