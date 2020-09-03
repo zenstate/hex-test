@@ -14,12 +14,12 @@ describe('1000 - Happy Path test', () => {
         page = await context.newPage();
     }, 30000);
 
-    it('should allow me to view 20 photos from the flickr photostream', async () => {
+    it('should allow me to view 15 photos from the flickr photostream', async () => {
         await page.goto('http://localhost', { waitUntil: 'networkidle2' });
         const photoElements = await page.$$("[data-testid='Photo']");
         expect(
             photoElements,
-        ).toHaveLength(20);
+        ).toHaveLength(15);
     }, 30000);
 
     afterAll(() => {

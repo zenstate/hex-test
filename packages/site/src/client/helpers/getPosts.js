@@ -21,10 +21,12 @@ const getPosts = ({
         'path_alias',
         'url_sq',
         'tags',
-        'url_m'
+        'url_m',
+        'url_l',
+        'url_t'
     ],
     page = 1,
-    per_page = 20
+    per_page = 15
 } = {}) => {
     let reqExtras;
     if (typeof extras === 'object') {

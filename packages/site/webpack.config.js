@@ -125,6 +125,29 @@ module.exports = [{
   },
   optimization: {
     runtimeChunk: 'single',
+    splitChunks: {
+      cacheGroups: {
+        react: {
+          name: 'react',
+          test: /[\\/]node_modules[\\/]react[\\/]/,
+          chunks: 'all',
+          enforce: true,
+        },
+        reactDom: {
+          name: 'react-dom',
+          test: /[\\/]node_modules[\\/]react-dom[\\/]/,
+          chunks: 'all',
+          enforce: true,
+        },
+        corejs: {
+          name: 'corejs',
+          test: /[\\/]node_modules[\\/]core-js[\\/]/,
+          chunks: 'all',
+          enforce: true,
+        },
+      }
+    },
+
     minimizer: [
       new TerserPlugin({
         cache: true,

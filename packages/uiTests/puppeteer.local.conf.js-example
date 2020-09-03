@@ -1,7 +1,7 @@
 // Use this file to customize how puppeteer tests run locally.  
 // Simply rename to puppeteer.local.conf.js
 module.exports = {
-    headless: true,
+    headless: false,
     // devtools: true,
     // slowMo: 250,
 };
